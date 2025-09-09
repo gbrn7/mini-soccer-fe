@@ -2,7 +2,7 @@ name: booking-field-app
 services:
   mini-soccer-fe:
     container_name: mini-soccer-fe
-    image: gbrn7/mini-soccer-fe
+    image: gbrn7/mini-soccer-fe:1
     ports:
       - "3000:3000"
     environment:
