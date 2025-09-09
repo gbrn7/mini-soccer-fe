@@ -19,9 +19,6 @@ export default function FieldList() {
         const signatureKey: string | undefined = apiConfig.field.signatureKey;
         const unixTimestamp: number = Math.floor(Date.now() / 1000);
         const validateKey: string = `${serviceName}:${signatureKey}:${unixTimestamp}`;
-        console.log("---")
-        console.log(validateKey)
-        console.log("---")
         const hash: Hash = crypto.createHash('sha256');
         hash.update(validateKey);
         const apiKey: string = hash.digest('hex');
