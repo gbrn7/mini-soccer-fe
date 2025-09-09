@@ -125,7 +125,7 @@ pipeline {
                 git pull origin "${TARGET_BRANCH}"
             else
                 echo "Directory does not exist. Cloning repository."
-                git clone -b "${TARGET_BRANCH}" @github.com:gbrn7/mini-soccer-fe.git "${targetDir}"
+                git clone -b "${TARGET_BRANCH}" git@github.com/gbrn7/mini-soccer-fe.git "${targetDir}"
                 cd "${targetDir}"
             fi
             npm install --legacy-peer-deps
